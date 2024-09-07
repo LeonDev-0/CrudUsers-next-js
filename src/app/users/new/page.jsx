@@ -83,7 +83,8 @@ const NewUser = ({ params }) => {
                     <div>
                         <input
                             type="text"
-                            placeholder="name"
+                            placeholder="Nombre"
+                            required
                             onChange={(e) => { setName(e.target.value) }}
                             value={name}
                         />
@@ -91,8 +92,9 @@ const NewUser = ({ params }) => {
                     <div>
                         <input
                             type="email"
-                            placeholder="email"
+                            placeholder="Correo"
                             onChange={(e) => { setEmail(e.target.value) }}
+                            required
                             value={email}
                         />
                     </div>
@@ -100,13 +102,13 @@ const NewUser = ({ params }) => {
                     <div>
                         {estado === 'edit' ? (
 
-                            <button type="submit">Actualizar</button>
+                            <button type="submit"style={{"background-color":"green","color":"white"}}>Actualizar</button>
                         ):(
 
-                            <button type="submit">Guardar</button>
+                            <button type="submit" style={{"background-color":"green","color":"white"}}>Guardar</button>
                         )
                     }
-                        <button type="button" onClick={() => route.push('/users')}>Cancelar</button>
+                        <button type="button" onClick={() => route.push('/users')}style={{"background-color":"red","color":"white"}}>Cancelar</button>
                     </div>
                 </fieldset>
             </form>

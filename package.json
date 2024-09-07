@@ -6,14 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^5.19.1",
     "next": "14.2.7",
     "react": "^18",
     "react-data-table-component": "^7.6.2",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "styled-components": "^6.1.13"
   },
   "devDependencies": {
     "eslint": "^8",
